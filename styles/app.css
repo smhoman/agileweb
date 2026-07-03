@@ -199,11 +199,12 @@ html { scroll-behavior: smooth; overflow-x: clip; }
   .about-band { background-color: var(--comb-700); padding: var(--space-7) 0; }
   .about-band__text { max-width: 42ch; margin: 0; font-family: var(--font-display); font-weight: 500; font-size: var(--text-2xl); line-height: 1.28; letter-spacing: -0.01em; color: var(--text-on-dark); }
   .about-path { position: relative; overflow: hidden; }
-  .about-path::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  .about-path::before { content: ""; position: absolute; inset: 0 auto 0 0; width: min(30vw, 360px); z-index: 0; pointer-events: none;
     background-image: var(--honeycomb); background-size: var(--honeycomb-size);
-    -webkit-mask-image: radial-gradient(74% 132% at 0% 48%, #000 0%, #000 34%, transparent 74%);
-    mask-image: radial-gradient(74% 132% at 0% 48%, #000 0%, #000 34%, transparent 74%); }
+    -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%);
+    mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%); }
   .about-path > .container { position: relative; z-index: 1; }
+  .about-path .about-prose { margin-left: clamp(20rem, 31vw, 30rem); margin-right: auto; }
   .about-prose { max-width: 68ch; }
   .about-prose h2 { font-size: var(--text-2xl); margin: var(--space-3) 0 var(--space-5); }
   .about-prose p { font-size: var(--text-md); line-height: 1.7; color: var(--text-body); margin-bottom: var(--space-4); }
@@ -231,6 +232,7 @@ html { scroll-behavior: smooth; overflow-x: clip; }
     .hero__grid, .about-hero__grid { gap: var(--space-7); }
     .grid-services, .models { gap: var(--space-4); }
     .hero__stats { gap: var(--space-4); }
+    .about-path .about-prose { margin-left: clamp(14rem, 26vw, 20rem); }
   }
 
   @media (max-width: 900px) {
@@ -250,6 +252,8 @@ html { scroll-behavior: smooth; overflow-x: clip; }
     .founder__mark { max-width: 200px; }
     .about-why__art { max-width: 320px; }
     .contact__aside { max-width: 620px; }
+    .about-path::before { width: min(24vw, 180px); -webkit-mask-image: linear-gradient(90deg, #000 0%, transparent 100%); mask-image: linear-gradient(90deg, #000 0%, transparent 100%); }
+    .about-path .about-prose { margin-left: auto; margin-right: auto; }
   }
 
   @media (max-width: 640px) {
@@ -281,6 +285,7 @@ html { scroll-behavior: smooth; overflow-x: clip; }
     .footer__col a { overflow-wrap: anywhere; }
     .contact__stats { padding: 0; }
     .about-photo__plate { left: var(--space-3); right: var(--space-3); bottom: var(--space-3); }
+    .about-path::before { display: none; }
     .about-why__art, .founder__mark { width: min(100%, 260px); }
     .about-ai { gap: var(--space-4); }
     .about-ai__icon { width: 52px; height: 52px; }
