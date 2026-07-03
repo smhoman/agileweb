@@ -5,8 +5,8 @@ import { useGo } from "@/lib/use-go";
 
 const SERVICES = [
   { icon: "monitor", title: "AI-Assisted Brand & Website Development", desc: "Custom, responsive websites and brand experiences built with modern AI-assisted workflows. Faster delivery, no loss of quality or customization.", tags: ["Web", "Brand", "AI"] },
-  { icon: "route", title: "Organizational Strategy & Growth", desc: "Strategic planning, scaling roadmaps, and change enablement, from mission and values to board and executive support.", tags: ["Strategy", "Scaling", "Change"] },
-  { icon: "layers", title: "Operations & Infrastructure", desc: "Business process design, operating models, and AI-enabled systems. Lean, documented, minimal technical debt.", tags: ["Ops", "Process", "Systems"] },
+  { icon: "route", title: "Organizational Strategy & Growth", desc: "Strategic planning, scaling roadmaps, and change enablement, from mission and values to nonprofit board and executive support.", tags: ["Strategy", "Scaling", "Change"] },
+  { icon: "layers", title: "Operations & Infrastructure", desc: "Business process improvement, operating models, and AI-enabled systems. Lean, documented, minimal technical debt.", tags: ["Ops", "Process", "Systems"] },
 ];
 
 const STEPS = [

@@ -1,7 +1,7 @@
 import "./globals.css";
 import { SiteChrome } from "@/components/site-chrome";
 import { StructuredData } from "@/components/structured-data";
-import { organizationSchema, pageMetadata, SITE, SITE_URL, websiteSchema } from "@/lib/seo";
+import { organizationSchema, pageMetadata, SEARCH_PHRASES, SITE, SITE_URL, websiteSchema } from "@/lib/seo";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -15,6 +15,7 @@ export const metadata = {
   creator: SITE.founder,
   publisher: SITE.name,
   keywords: [
+    ...SEARCH_PHRASES,
     "operations consulting",
     "organizational strategy",
     "AI-assisted website development",

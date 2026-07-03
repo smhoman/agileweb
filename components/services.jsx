@@ -6,20 +6,20 @@ import { useGo } from "@/lib/use-go";
 const DETAIL = {
   web: {
     label: "Brand & Web",
-    h: "AI-assisted brand and websites, built at startup speed.",
-    p: "Custom, responsive websites and brand experiences built with modern AI-assisted workflows. Faster delivery timelines without sacrificing quality or customization. Positioning, architecture, and content, then a site that ships.",
+    h: "Brand and website design/development, built at startup speed.",
+    p: "AI-assisted design and build of custom, responsive websites and brand experiences with modern workflows. Faster delivery timelines without sacrificing quality or customization. Positioning, architecture, content, and a site that ships at a fraction of typical costs, ideal for small businesses and nonprofits.",
     bullets: ["Brand positioning & messaging", "Website strategy, architecture & content", "Interactive, responsive builds", "Ongoing optimization & digital growth"],
   },
   strategy: {
     label: "Strategy & Growth",
     h: "Strategic planning and scaling roadmaps that hold up.",
-    p: "From mission, vision, and values to board and executive-level planning: the strategy and change enablement that let an organization scale without losing coherence.",
+    p: "From mission, vision, and values to nonprofit board and executive-level planning: the strategy and change enablement that let an organization scale without losing coherence.",
     bullets: ["Strategic planning facilitation", "Mission, vision & values development", "Scaling & growth roadmaps", "Fractional Chief of Staff support"],
   },
   ops: {
     label: "Ops & Infrastructure",
     h: "Lean operating systems with minimal technical debt.",
-    p: "Business process design, operating models, and AI-enabled systems: documented, scalable, and built to outlast the engagement. Fewer loose ends, not more tools.",
+    p: "Fractional Chief of Staff support to accelerate business process improvement through business design, operating models, and AI-enabled systems: documented, scalable, and built to outlast the engagement. Fewer loose ends, not more tools.",
     bullets: ["Business process design & optimization", "Operating models & workflows", "HR policies & organizational foundations", "AI-enabled operational systems"],
   },
 };
