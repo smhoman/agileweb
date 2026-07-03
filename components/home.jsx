@@ -27,30 +27,30 @@ const PROOF_CASES = [
   {
     eyebrow: "Digital program",
     title: "GraceNote Collective 2026 season program",
-    summary: "A public-facing digital program for an inaugural interfaith gospel choir season, including performances, repertoire, sponsor recognition, and donor calls to action.",
+    summary: "Featured artifact: the Program page from a full organizational buildout for a new interfaith gospel choir.",
     link: "https://gracenotecollective.org/program",
     linkLabel: "View the live Program page",
     images: [
       { src: "/assets/proof/gracenote-program-preview.png", alt: "GraceNote Collective 2026 season Program page", caption: "Desktop Program page preview", frame: "web" },
     ],
     details: [
-      "Designed the program experience around the choir's visual identity, season schedule, repertoire, and donor hierarchy.",
-      "Structured sponsor and supporter recognition so major gifts, founding partners, and volunteers each have a clear place.",
-      "Built the page to support real audience needs: event details, gratitude, donation pathways, booking requests, and social follow-up.",
+      "Built the organization from concept to 501(c)(3), including board formation, operating structure, and governance framework.",
+      "Created the fundraising foundation for the inaugural season, including donor tiers, sponsor recognition, and supporter communications.",
+      "Designed and built the full website, with the Program page shown here as one public-facing example of the broader brand and digital infrastructure.",
     ],
   },
   {
     eyebrow: "Print collateral",
     title: "HODC 2026-2028 strategic plan trifold",
-    summary: "A print-ready trifold translating a multi-year affordable-housing strategy into a concise board, partner, and community-facing leave-behind.",
+    summary: "Featured artifact: a strategic plan pamphlet from a broader planning, governance, and community-engagement initiative.",
     images: [
       { src: "/assets/proof/hodc-trifold-outside.png", alt: "Outside panels of the HODC 2026-2028 strategic plan trifold", caption: "Outside panels", frame: "sheet" },
       { src: "/assets/proof/hodc-trifold-inside.png", alt: "Inside panels of the HODC 2026-2028 strategic plan trifold", caption: "Inside spread", frame: "sheet" },
     ],
     details: [
-      "Organized the plan into outside and inside panels with a clear reader path across impact, goals, priorities, timeline, and calls to action.",
-      "Balanced data, mission language, and implementation detail so the piece works for funders, municipalities, partners, and neighbors.",
-      "Prepared the layout at letter trifold dimensions for print review and export.",
+      "Facilitated the strategic planning cycle, including a refreshed mission, vision, values, priorities, and implementation direction.",
+      "Created an Associate Board model to expand volunteer leadership and build a stronger pathway for community involvement.",
+      "Developed new community programming focused on resident belonging and more meaningful volunteer engagement.",
     ],
   },
 ];
