@@ -191,13 +191,19 @@ html { scroll-behavior: smooth; overflow-x: clip; }
   .about-hero__body { font-size: var(--text-md); line-height: 1.6; color: var(--text-body); margin-bottom: var(--space-6); }
   .about-hero__actions { display: flex; gap: var(--space-3); flex-wrap: wrap; }
   .about-hero__photo { position: relative; }
-  .about-photo { position: relative; border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lift); border: 1px solid var(--border-subtle); }
-  .about-photo img { display: block; width: 100%; height: auto; }
+  .about-photo { position: relative; aspect-ratio: 4 / 5; border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lift); border: 1px solid var(--border-subtle); }
+  .about-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 34%; }
   .about-photo__plate { position: absolute; left: var(--space-4); right: var(--space-4); bottom: var(--space-4); display: flex; flex-direction: column; gap: 2px; padding: var(--space-3) var(--space-4); border-radius: var(--radius-md); background: color-mix(in srgb, var(--comb-900) 74%, transparent); backdrop-filter: blur(6px); }
   .about-photo__name { font-family: var(--font-display); font-weight: 600; font-size: var(--text-md); color: var(--paper); }
   .about-photo__role { font-family: var(--font-mono); font-size: var(--text-2xs); letter-spacing: .08em; text-transform: uppercase; color: var(--honey-300); }
   .about-band { background-color: var(--comb-700); padding: var(--space-7) 0; }
   .about-band__text { max-width: 42ch; margin: 0; font-family: var(--font-display); font-weight: 500; font-size: var(--text-2xl); line-height: 1.28; letter-spacing: -0.01em; color: var(--text-on-dark); }
+  .about-path { position: relative; overflow: hidden; }
+  .about-path::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background-image: var(--honeycomb); background-size: var(--honeycomb-size);
+    -webkit-mask-image: radial-gradient(74% 132% at 0% 48%, #000 0%, #000 34%, transparent 74%);
+    mask-image: radial-gradient(74% 132% at 0% 48%, #000 0%, #000 34%, transparent 74%); }
+  .about-path > .container { position: relative; z-index: 1; }
   .about-prose { max-width: 68ch; }
   .about-prose h2 { font-size: var(--text-2xl); margin: var(--space-3) 0 var(--space-5); }
   .about-prose p { font-size: var(--text-md); line-height: 1.7; color: var(--text-body); margin-bottom: var(--space-4); }
