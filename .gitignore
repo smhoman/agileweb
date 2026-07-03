@@ -2,11 +2,13 @@
 /.next/
 /out/
 /build
+/.open-next/
 .DS_Store
 *.pem
 *.log
 npm-debug.log*
 .env*.local
 .env
+.dev.vars
 .vscode
 .idea

@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",          // static HTML export -> ./out (served directly by Cloudflare Pages)
+  output: "standalone",      // required by OpenNext for Cloudflare Workers deployment
   images: { unoptimized: true },
-  trailingSlash: true,       // emit /about/index.html etc. for clean static URLs
 };
 export default nextConfig;
