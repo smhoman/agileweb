@@ -1,12 +1,13 @@
-# Agile Consulting - Website (Next.js)
+<<<<<<< HEAD
+# Agileweb - Agile Consulting Website
 
 Marketing site for Agile Consulting. Built with **Next.js (App Router)** and exported as a **static site**, optimized for fast builds and deployment on **Cloudflare Pages**.
 
 > Build like a startup. Operate like an institution.
 
 ## Stack
-- Next.js 14 (App Router) with `output: "export"` - pure static HTML/CSS/JS, no server runtime.
-- React 18
+- Next.js 16 (App Router) with `output: "export"` - pure static HTML/CSS/JS, no server runtime.
+- React 19
 - lucide-react for icons
 - Plain CSS with design-system tokens.
 
@@ -25,7 +26,7 @@ Connect the GitHub repo, then set:
 | Framework preset | Next.js (Static HTML Export) |
 | Build command | `npx next build` |
 | Build output directory | `out` |
-| Node version | 18 or 20 |
+| Node version | 20 or 22 |
 
 ## Structure
 ```
