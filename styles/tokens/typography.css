@@ -1,0 +1,54 @@
+/* ============================================================
+   Agile Consulting — Typography Tokens
+   Display: Newsreader (editorial serif — "operate like an institution")
+   Body/UI: Libre Franklin (clean American sans — "build like a startup")
+   Mono:    IBM Plex Mono (labels, metrics, // eyebrows — systems/AI)
+   NOTE: substituted from Google Fonts — no brand fonts supplied.
+   ============================================================ */
+
+:root {
+  /* ---- Families -------------------------------------------- */
+  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-body:    "Libre Franklin", system-ui, -apple-system, sans-serif;
+  --font-mono:    "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* ---- Weights --------------------------------------------- */
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  /* ---- Type scale (tuned) ---------------------------------- */
+  --text-2xs: 0.6875rem;  /* 11px — mono micro-labels */
+  --text-xs:  0.75rem;    /* 12px */
+  --text-sm:  0.875rem;   /* 14px */
+  --text-base:1rem;       /* 16px */
+  --text-md:  1.125rem;   /* 18px */
+  --text-lg:  1.375rem;   /* 22px */
+  --text-xl:  1.75rem;    /* 28px */
+  --text-2xl: 2.25rem;    /* 36px */
+  --text-3xl: 2.9375rem;  /* 47px */
+  --text-4xl: 3.75rem;    /* 60px */
+  --text-5xl: 4.75rem;    /* 76px */
+
+  /* ---- Line heights ---------------------------------------- */
+  --leading-tight:   1.06;
+  --leading-snug:    1.16;
+  --leading-normal:  1.55;
+  --leading-relaxed: 1.7;
+
+  /* ---- Letter spacing -------------------------------------- */
+  --tracking-tight:  -0.02em;  /* serif display */
+  --tracking-snug:   -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.04em;
+  --tracking-label:  0.16em;   /* mono eyebrow labels */
+
+  /* ---- Semantic roles -------------------------------------- */
+  --display-font:   var(--font-display);
+  --display-weight: var(--weight-semibold);
+  --heading-font:   var(--font-display);
+  --heading-weight: var(--weight-semibold);
+  --body-font:      var(--font-body);
+  --label-font:     var(--font-mono);
+}

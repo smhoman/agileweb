@@ -1,0 +1,69 @@
+/* ============================================================
+   Agile Consulting — Base element defaults & primitives
+   Sets the brand voice on raw elements so any consuming page
+   inherits the system without extra classes.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--text-body);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings are the editorial serif — the "institution" voice */
+h1, h2, h3, h4, h5 {
+  font-family: var(--heading-font);
+  color: var(--text-strong);
+  font-weight: var(--heading-weight);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-snug);
+  margin: 0 0 var(--space-4);
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--text-3xl); font-weight: var(--display-weight); letter-spacing: var(--tracking-tight); line-height: var(--leading-tight); }
+h2 { font-size: var(--text-2xl); }
+h3 { font-size: var(--text-xl); }
+h4 { font-size: var(--text-lg); }
+
+p { margin: 0 0 var(--space-4); text-wrap: pretty; }
+
+a { color: var(--text-link); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+strong { font-weight: var(--weight-semibold); color: var(--text-strong); }
+code, kbd, samp { font-family: var(--font-mono); font-size: 0.9em; }
+
+:focus-visible { outline: none; box-shadow: var(--focus-ring); border-radius: var(--radius-xs); }
+
+/* ---- Brand primitives (utility) ---------------------------- */
+
+/* Mono eyebrow label — the signature editorial-technical accent */
+.ac-eyebrow {
+  font-family: var(--label-font);
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Honeycomb line texture (subtle honey hexes; reads on light + dark) */
+.ac-honeycomb {
+  background-image: var(--honeycomb);
+  background-size: var(--honeycomb-size);
+}
+
+/* Crisp hexagon SHAPE — for icon tiles, monograms, feature graphics.
+   Set a width; height follows via aspect-ratio. */
+.ac-hex {
+  aspect-ratio: var(--hex-ratio);
+  clip-path: var(--hex-clip);
+}

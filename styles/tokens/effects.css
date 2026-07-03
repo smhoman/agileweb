@@ -1,0 +1,56 @@
+/* ============================================================
+   Agile Consulting — Effects: radii, shadows, motion, motif
+   Motif: HONEYCOMB — modular hexagonal cells (build fast) that
+   tessellate into one ordered structure (operate as an institution).
+   ============================================================ */
+
+:root {
+  /* ---- Corner radii ---------------------------------------- */
+  --radius-xs:   3px;
+  --radius-sm:   6px;
+  --radius-md:   10px;   /* default control */
+  --radius-lg:   14px;   /* cards */
+  --radius-xl:   20px;   /* panels */
+  --radius-pill: 999px;
+
+  /* ---- Shadows: soft, low, premium ------------------------- */
+  --shadow-xs: 0 1px 2px rgba(18, 16, 12, 0.06);
+  --shadow-sm: 0 1px 3px rgba(18, 16, 12, 0.08), 0 1px 2px rgba(18, 16, 12, 0.04);
+  --shadow-md: 0 4px 12px rgba(18, 16, 12, 0.08), 0 2px 4px rgba(18, 16, 12, 0.04);
+  --shadow-lg: 0 12px 28px rgba(18, 16, 12, 0.12), 0 4px 8px rgba(18, 16, 12, 0.05);
+  --shadow-xl: 0 24px 60px rgba(18, 16, 12, 0.16), 0 8px 16px rgba(18, 16, 12, 0.06);
+
+  /* Signature "honey lift" — warm-tinted elevation for hero cards */
+  --shadow-lift: 0 16px 40px rgba(94, 59, 15, 0.18), 0 3px 8px rgba(18, 16, 12, 0.06);
+
+  /* Inset for wells / inputs */
+  --shadow-inset: inset 0 1px 2px rgba(18, 16, 12, 0.06);
+
+  /* ---- Motion ---------------------------------------------- */
+  /* Coordinated, settled — never bouncy (bounce reads unstable) */
+  /* ease-out settle */
+  --ease-standard: cubic-bezier(0.22, 0.61, 0.36, 1);   /* @kind other */
+  --ease-entrance: cubic-bezier(0.16, 0.84, 0.44, 1);    /* @kind other */
+  --ease-exit:     cubic-bezier(0.4, 0.0, 0.7, 0.2);     /* @kind other */
+  --ease-inout:    cubic-bezier(0.65, 0.05, 0.36, 1);    /* @kind other */
+
+  --dur-fast:   120ms;  /* @kind other */
+  --dur-base:   200ms;  /* @kind other */
+  --dur-slow:   320ms;  /* @kind other */
+  --dur-slower: 520ms;  /* @kind other */
+
+  --motion-hover: 150ms var(--ease-standard);
+
+  /* ---- Motif: honeycomb ------------------------------------ */
+  /* Tileable hex-line texture as a self-contained data URI, so it resolves
+     no matter where a consuming page lives (a relative url() inside a CSS
+     variable resolves against the DOCUMENT, not this stylesheet, and would
+     break on nested pages / inline styles). Source: assets/honeycomb.svg. */
+  --honeycomb: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='54' height='31.177' viewBox='0 0 54 31.177'%3E%3Cpath d='M-18 0L-9 -15.588L9 -15.588L18 0L9 15.588L-9 15.588ZM36 0L45 -15.588L63 -15.588L72 0L63 15.588L45 15.588ZM-18 31.177L-9 15.588L9 15.588L18 31.177L9 46.765L-9 46.765ZM36 31.177L45 15.588L63 15.588L72 31.177L63 46.765L45 46.765ZM9 15.588L18 0L36 0L45 15.588L36 31.177L18 31.177Z' fill='none' stroke='%23C6851C' stroke-width='1.3' stroke-opacity='0.5'%3E%3C/path%3E%3C/svg%3E");   /* @kind other */
+  --honeycomb-size: 54px 31.18px;                /* @kind spacing */
+
+  /* Flat-top hexagon clip-path for crisp hex SHAPES (icon tiles,
+     monograms, feature graphics). Pair with aspect-ratio: 1 / 0.866. */
+  --hex-clip: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);  /* @kind other */
+  --hex-ratio: 1.1547;   /* @kind other */   /* width : height for a regular flat-top hex */
+}

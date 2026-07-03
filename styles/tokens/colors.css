@@ -1,0 +1,101 @@
+/* ============================================================
+   Agile Consulting — Color Tokens
+   Direction: "Honeycomb" — warm-neutral foundations, a single
+   honey signal, and a warm near-black "comb" for institutional
+   dark surfaces. Honey is the only chromatic accent (disciplined,
+   premium — not gourmet). Cool hues appear only in semantics.
+   ============================================================ */
+
+:root {
+  /* ---- Neutrals: warm graphite scale ------------------------ */
+  --paper:        #F8F5EE;  /* warm ivory — default page */
+  --paper-sunk:   #F1ECE1;  /* slightly recessed surface  */
+  --paper-raised: #FFFFFF;  /* cards / raised surfaces     */
+
+  --graphite-050: #ECE8DF;
+  --graphite-100: #DBD5C8;
+  --graphite-200: #C1BAA8;
+  --graphite-300: #9E9683;
+  --graphite-400: #79715F;
+  --graphite-500: #544D3F;
+  --graphite-600: #3A342A;
+  --graphite-700: #29241C;
+  --graphite-800: #1B1712;
+  --graphite-900: #12100C;  /* near-black warm ink */
+
+  /* ---- Honey: primary signal (honeybee / warm light) -------- */
+  --honey-050: #FBF1DA;
+  --honey-100: #F6E2B3;
+  --honey-200: #EFCB78;
+  --honey-300: #E6B248;
+  --honey-400: #D89A29;
+  --honey-500: #C6851C;  /* primary brand accent */
+  --honey-600: #A66B14;
+  --honey-700: #835312;
+  --honey-800: #5E3B0F;
+
+  /* ---- Comb: warm institutional darks (the hive interior) --- */
+  --comb-050: #EEE9DC;
+  --comb-100: #E0D9C7;
+  --comb-200: #C6BEA9;
+  --comb-300: #9C9480;
+  --comb-400: #6F6857;
+  --comb-500: #504A3C;
+  --comb-600: #3A352A;
+  --comb-700: #2A2720;  /* dark surface primary */
+  --comb-800: #1D1B15;
+  --comb-900: #14120D;
+
+  /* ---- Semantic hues ---------------------------------------- */
+  --green-500:  #2E7D5B;  --green-100: #D4E9DE;
+  --amber-500:  #B67F14;  --amber-100: #F4E4BE;
+  --red-500:    #BC4130;  --red-100:   #F3D6CF;
+  --blue-500:   #2E6FA8;  --blue-100:  #D3E2EF;
+
+  /* ============================================================
+     SEMANTIC ALIASES — reference these in product code
+     ============================================================ */
+
+  /* Surfaces */
+  --surface-page:      var(--paper);
+  --surface-sunk:      var(--paper-sunk);
+  --surface-card:      var(--paper-raised);
+  --surface-inverse:   var(--comb-900);
+  --surface-depth:     var(--comb-700);
+
+  /* Text */
+  --text-strong:       var(--graphite-900);
+  --text-body:         var(--graphite-700);
+  --text-muted:        var(--graphite-400);
+  --text-subtle:       var(--graphite-300);
+  --text-on-dark:      var(--paper);
+  --text-on-dark-soft: var(--comb-100);
+  --text-on-accent:    var(--graphite-900);
+  --text-link:         var(--honey-700);
+
+  /* Borders */
+  --border-subtle:     var(--graphite-100);
+  --border-default:    var(--graphite-200);
+  --border-strong:     var(--graphite-400);
+  --border-inverse:    var(--comb-500);
+
+  /* Brand / interactive */
+  --accent:            var(--honey-500);
+  --accent-hover:      var(--honey-600);
+  --accent-press:      var(--honey-700);
+  --accent-soft:       var(--honey-050);
+  --accent-ring:       var(--honey-300);
+
+  --depth:             var(--comb-700);
+  --depth-hover:       var(--comb-600);
+  --depth-soft:        var(--comb-050);
+
+  /* Feedback */
+  --success:      var(--green-500);   --success-soft: var(--green-100);
+  --warning:      var(--amber-500);   --warning-soft: var(--amber-100);
+  --danger:       var(--red-500);     --danger-soft:  var(--red-100);
+  --info:         var(--blue-500);    --info-soft:    var(--blue-100);
+
+  /* Focus */
+  --focus-ring: 0 0 0 3px color-mix(in srgb, var(--honey-400) 45%, transparent);
+}
