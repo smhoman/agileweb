@@ -28,6 +28,9 @@ const PROOF_CASES = [
     eyebrow: "Digital program",
     title: "GraceNote Collective 2026 season program",
     summary: "A public-facing digital program for an inaugural interfaith gospel choir season, including performances, repertoire, sponsor recognition, and donor calls to action.",
+    images: [
+      { src: "/assets/proof/gracenote-program-preview.png", alt: "GraceNote Collective 2026 season Program page", caption: "Program page preview" },
+    ],
     details: [
       "Designed the program experience around the choir's visual identity, season schedule, repertoire, and donor hierarchy.",
       "Structured sponsor and supporter recognition so major gifts, founding partners, and volunteers each have a clear place.",
@@ -38,6 +41,10 @@ const PROOF_CASES = [
     eyebrow: "Print collateral",
     title: "HODC 2026-2028 strategic plan trifold",
     summary: "A print-ready trifold translating a multi-year affordable-housing strategy into a concise board, partner, and community-facing leave-behind.",
+    images: [
+      { src: "/assets/proof/hodc-trifold-outside.png", alt: "Outside panels of the HODC 2026-2028 strategic plan trifold", caption: "Outside panels" },
+      { src: "/assets/proof/hodc-trifold-inside.png", alt: "Inside panels of the HODC 2026-2028 strategic plan trifold", caption: "Inside spread" },
+    ],
     details: [
       "Organized the plan into outside and inside panels with a clear reader path across impact, goals, priorities, timeline, and calls to action.",
       "Balanced data, mission language, and implementation detail so the piece works for funders, municipalities, partners, and neighbors.",
@@ -166,6 +173,16 @@ export function Home() {
                   <Icon n="chevron-down" />
                 </summary>
                 <div className="proof-case__body">
+                  <div className="proof-case__gallery">
+                    {item.images.map((image) => (
+                      <figure className="proof-case__figure" key={image.src}>
+                        <div className="proof-case__preview">
+                          <img src={image.src} alt={image.alt} />
+                        </div>
+                        <figcaption>{image.caption}</figcaption>
+                      </figure>
+                    ))}
+                  </div>
                   <ul>
                     {item.details.map((detail) => <li key={detail}>{detail}</li>)}
                   </ul>

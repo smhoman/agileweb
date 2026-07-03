@@ -178,6 +178,11 @@ html { scroll-behavior: smooth; overflow-x: clip; }
   .proof-case__title { display: block; font-family: var(--font-display); font-weight: var(--weight-semibold); font-size: var(--text-lg); line-height: 1.18; color: var(--text-strong); margin-bottom: var(--space-2); }
   .proof-case__intro { display: block; font-size: var(--text-sm); line-height: 1.55; color: var(--text-muted); }
   .proof-case__body { border-top: 1px solid var(--border-subtle); padding: 0 var(--space-5) var(--space-5); }
+  .proof-case__gallery { display: grid; gap: var(--space-4); padding-top: var(--space-5); }
+  .proof-case__figure { margin: 0; }
+  .proof-case__preview { max-height: 560px; overflow: auto; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); background: var(--surface-sunk); box-shadow: var(--shadow-inset); }
+  .proof-case__preview img { display: block; width: 100%; height: auto; }
+  .proof-case__figure figcaption { margin-top: var(--space-2); font-family: var(--font-mono); font-size: var(--text-2xs); letter-spacing: .08em; text-transform: uppercase; color: var(--text-subtle); }
   .proof-case__body ul { list-style: none; padding: var(--space-4) 0 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-3); }
   .proof-case__body li { position: relative; padding-left: 18px; font-size: var(--text-sm); line-height: 1.5; color: var(--text-body); }
   .proof-case__body li::before { content: ""; position: absolute; left: 0; top: 8px; width: 9px; aspect-ratio: var(--hex-ratio); clip-path: var(--hex-clip); background: var(--honey-300); }
