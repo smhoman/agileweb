@@ -1,31 +1,32 @@
-<<<<<<< HEAD
 # Agileweb - Agile Consulting Website
 
-Marketing site for Agile Consulting. Built with **Next.js (App Router)** and exported as a **static site**, optimized for fast builds and deployment on **Cloudflare Pages**.
+Marketing site for Agile Consulting. Built with **Next.js (App Router)** and configured for deployment to Cloudflare with OpenNext.
 
 > Build like a startup. Operate like an institution.
 
 ## Stack
-- Next.js 16 (App Router) with `output: "export"` - pure static HTML/CSS/JS, no server runtime.
+- Next.js 16 (App Router) with `output: "standalone"`
 - React 19
 - lucide-react for icons
+- OpenNext for Cloudflare and Wrangler for Cloudflare builds/deploys
 - Plain CSS with design-system tokens.
 
 ## Getting started
 ```bash
 npm install
 npm run dev        # http://localhost:3000
-npm run build      # static site -> ./out
+npm run build      # production Next.js build
+npm run preview    # OpenNext Cloudflare preview
 ```
 
-## Deploy to Cloudflare Pages
+## Deploy to Cloudflare
 Connect the GitHub repo, then set:
 
 | Setting | Value |
 | --- | --- |
-| Framework preset | Next.js (Static HTML Export) |
-| Build command | `npx next build` |
-| Build output directory | `out` |
+| Build command | `npx opennextjs-cloudflare build` |
+| Deploy command | `npx opennextjs-cloudflare deploy` |
+| Worker config | `wrangler.jsonc` |
 | Node version | 20 or 22 |
 
 ## Structure
