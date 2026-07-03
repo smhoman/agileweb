@@ -23,6 +23,29 @@ const WORK = [
   "Built AI-assisted websites that deliver custom experiences without traditional agency timelines or costs.",
 ];
 
+const PROOF_CASES = [
+  {
+    eyebrow: "Digital program",
+    title: "GraceNote Collective 2026 season program",
+    summary: "A public-facing digital program for an inaugural interfaith gospel choir season, including performances, repertoire, sponsor recognition, and donor calls to action.",
+    details: [
+      "Designed the program experience around the choir's visual identity, season schedule, repertoire, and donor hierarchy.",
+      "Structured sponsor and supporter recognition so major gifts, founding partners, and volunteers each have a clear place.",
+      "Built the page to support real audience needs: event details, gratitude, donation pathways, booking requests, and social follow-up.",
+    ],
+  },
+  {
+    eyebrow: "Print collateral",
+    title: "HODC 2026-2028 strategic plan trifold",
+    summary: "A print-ready trifold translating a multi-year affordable-housing strategy into a concise board, partner, and community-facing leave-behind.",
+    details: [
+      "Organized the plan into outside and inside panels with a clear reader path across impact, goals, priorities, timeline, and calls to action.",
+      "Balanced data, mission language, and implementation detail so the piece works for funders, municipalities, partners, and neighbors.",
+      "Prepared the layout at letter trifold dimensions for print review and export.",
+    ],
+  },
+];
+
 export function Home() {
   const go = useGo();
   const start = (e) => { e.preventDefault(); go("contact"); };
@@ -129,6 +152,25 @@ export function Home() {
                 <span className="work__hex" aria-hidden="true"></span>
                 <p className="work__text" dangerouslySetInnerHTML={{ __html: w }} />
               </div>
+            ))}
+          </div>
+          <div className="proof-cases" aria-label="Selected client work examples">
+            {PROOF_CASES.map((item) => (
+              <details className="proof-case" key={item.title}>
+                <summary className="proof-case__summary">
+                  <span>
+                    <span className="proof-case__eyebrow">{item.eyebrow}</span>
+                    <span className="proof-case__title">{item.title}</span>
+                    <span className="proof-case__intro">{item.summary}</span>
+                  </span>
+                  <Icon n="chevron-down" />
+                </summary>
+                <div className="proof-case__body">
+                  <ul>
+                    {item.details.map((detail) => <li key={detail}>{detail}</li>)}
+                  </ul>
+                </div>
+              </details>
             ))}
           </div>
           <div className="proof__subhead">
