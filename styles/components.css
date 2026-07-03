@@ -6,6 +6,7 @@
   display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
   font-family: var(--font-body); font-weight: var(--weight-semibold);
   border: 1.5px solid var(--_bd); background: var(--_bg); color: var(--_fg);
+  max-width: 100%; min-width: 0;
   border-radius: var(--radius-md); cursor: pointer; white-space: nowrap;
   text-decoration: none; line-height: 1;
   transition: background var(--dur-fast) var(--ease-standard),
@@ -150,7 +151,7 @@
   display: inline-flex; align-items: center; gap: var(--space-1);
   font-family: var(--font-body); font-size: var(--text-xs); font-weight: var(--weight-semibold);
   line-height: 1; padding: 4px 9px; border-radius: var(--radius-pill);
-  background: var(--_bg); color: var(--_fg); border: 1px solid var(--_bd); white-space: nowrap;
+  max-width: 100%; background: var(--_bg); color: var(--_fg); border: 1px solid var(--_bd); white-space: nowrap;
 }
 .ac-badge__dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
 .ac-badge svg, .ac-badge [data-lucide] { width: 13px; height: 13px; }
@@ -211,7 +212,7 @@
 .ac-tag__x svg { width: 12px; height: 12px; }
 
 /* ---- Tabs ---- */
-.ac-tabs { font-family: var(--font-body); }
+.ac-tabs { max-width: 100%; overflow-x: auto; font-family: var(--font-body); }
 .ac-tabs__list { display: inline-flex; gap: var(--space-1); position: relative; }
 .ac-tabs--line .ac-tabs__list { gap: var(--space-5); border-bottom: 1.5px solid var(--border-subtle); }
 .ac-tabs--pill .ac-tabs__list { background: var(--surface-sunk); padding: 4px; border-radius: var(--radius-md); }
@@ -257,3 +258,17 @@
 .ac-toast__x { flex-shrink: 0; width: 26px; height: 26px; border: none; background: transparent; border-radius: var(--radius-sm); color: var(--text-subtle); cursor: pointer; display: grid; place-items: center; }
 .ac-toast__x:hover { background: var(--surface-sunk); color: var(--text-body); }
 .ac-toast__x svg { width: 15px; height: 15px; }
+
+@media (max-width: 640px) {
+  .ac-btn { min-height: 42px; white-space: normal; text-align: center; }
+  .ac-btn--lg { height: auto; min-height: 50px; padding-block: var(--space-3); }
+  .ac-card--pad-lg { padding: var(--space-5); }
+  .ac-card--pad-md { padding: var(--space-4); }
+  .ac-input, .ac-select { font-size: 16px; }
+  .ac-tabs { overflow-x: visible; }
+  .ac-tabs__list { width: 100%; }
+  .ac-tabs--pill .ac-tabs__list { display: grid; grid-template-columns: 1fr; }
+  .ac-tabs--pill .ac-tab { justify-content: center; width: 100%; }
+  .ac-stat__value { font-size: clamp(2rem, 10vw, var(--text-3xl)); }
+  .ac-toast { width: 100%; min-width: 0; max-width: none; }
+}

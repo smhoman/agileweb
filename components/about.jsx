@@ -57,7 +57,7 @@ export function About() {
       </section>
 
       {/* MY PATH */}
-      <section className="section">
+      <section className="section about-path">
         <div className="container about-prose">
           <span className="ac-eyebrow">// My path here</span>
           <h2>Growth outpaces systems. That's the problem I love to solve.</h2>

@@ -18,7 +18,7 @@ export function Nav() {
         <Wordmark onClick={nav("home")} />
         <nav className="nav__links">{links.map((l)=><a key={l.id} href={"#"+l.id} className="nav__link" onClick={nav(l.id)}>{l.label}</a>)}</nav>
         <div className="nav__cta"><Button variant="primary" size="sm" iconRight={<Icon n="arrow-right" />} onClick={nav("contact")}>Start</Button></div>
-        <button className="nav__burger" aria-label="Menu" onClick={()=>setOpen((o)=>!o)}><Icon n={open?"x":"menu"} /></button>
+        <button className="nav__burger" type="button" aria-label="Menu" aria-expanded={open} onClick={()=>setOpen((o)=>!o)}><Icon n={open?"x":"menu"} /></button>
       </div>
       {open && (
         <div className="nav__mobile">
