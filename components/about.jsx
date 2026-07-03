@@ -39,7 +39,7 @@ export function About() {
           </div>
           <div className="about-hero__photo">
             <div className="about-photo">
-              <img src="/assets/headshot.jpg" alt="Sarah Homan, founder of Agile Consulting" />
+              <img src="/assets/headshot.jpg" alt="Sarah Homan, founder of Agile Consulting" width="1080" height="1601" fetchPriority="high" decoding="async" />
             </div>
             <div className="about-photo__plate">
               <span className="about-photo__name">Sarah Homan</span>
@@ -90,7 +90,7 @@ export function About() {
       <section className="section">
         <div className="container about-why">
           <div className="about-why__art" aria-hidden="true">
-            <img src="/assets/honeycomb-cluster.svg" alt="" />
+            <img src="/assets/honeycomb-cluster.svg" alt="" loading="lazy" decoding="async" />
           </div>
           <div className="about-why__copy">
             <span className="ac-eyebrow">// Why the honeycomb?</span>

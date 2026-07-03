@@ -31,7 +31,7 @@ const PROOF_CASES = [
     link: "https://gracenotecollective.org/program",
     linkLabel: "View the live Program page",
     images: [
-      { src: "/assets/proof/gracenote-program-preview.png", alt: "GraceNote Collective 2026 season Program page", caption: "Desktop Program page preview", frame: "web" },
+      { src: "/assets/proof/gracenote-program-preview.png", alt: "GraceNote Collective 2026 season Program page", caption: "Desktop Program page preview", frame: "web", width: 1350, height: 5526 },
     ],
     details: [
       "Built the organization from concept to 501(c)(3), including board formation, operating structure, and governance framework.",
@@ -44,8 +44,8 @@ const PROOF_CASES = [
     title: "HODC 2026-2028 strategic plan trifold",
     summary: "Featured artifact: a strategic plan pamphlet from a broader planning, governance, and community-engagement initiative.",
     images: [
-      { src: "/assets/proof/hodc-trifold-outside.png", alt: "Outside panels of the HODC 2026-2028 strategic plan trifold", caption: "Outside panels", frame: "sheet" },
-      { src: "/assets/proof/hodc-trifold-inside.png", alt: "Inside panels of the HODC 2026-2028 strategic plan trifold", caption: "Inside spread", frame: "sheet" },
+      { src: "/assets/proof/hodc-trifold-outside.png", alt: "Outside panels of the HODC 2026-2028 strategic plan trifold", caption: "Outside panels", frame: "sheet", width: 900, height: 695 },
+      { src: "/assets/proof/hodc-trifold-inside.png", alt: "Inside panels of the HODC 2026-2028 strategic plan trifold", caption: "Inside spread", frame: "sheet", width: 900, height: 695 },
     ],
     details: [
       "Facilitated the strategic planning cycle, including a refreshed mission, vision, values, priorities, and implementation direction.",
@@ -179,7 +179,7 @@ export function Home() {
                     {item.images.map((image) => (
                       <figure className="proof-case__figure" key={image.src}>
                         <div className={`proof-case__preview proof-case__preview--${image.frame}`}>
-                          <img src={image.src} alt={image.alt} />
+                          <img src={image.src} alt={image.alt} width={image.width} height={image.height} loading="lazy" decoding="async" />
                         </div>
                         <figcaption>{image.caption}</figcaption>
                       </figure>
@@ -224,7 +224,7 @@ export function Home() {
       {/* FOUNDER */}
       <section className="section founder">
         <div className="container founder__grid">
-          <div className="founder__mark" aria-hidden="true"><img src="/assets/honeycomb-cluster.svg" alt="" /></div>
+          <div className="founder__mark" aria-hidden="true"><img src="/assets/honeycomb-cluster.svg" alt="" loading="lazy" decoding="async" /></div>
           <div className="founder__copy">
             <span className="ac-eyebrow">// Founder-led</span>
             <h2>You hire judgment. You keep the systems.</h2>
