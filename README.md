@@ -15,7 +15,8 @@ Marketing site for Agile Consulting. Built with **Next.js (App Router)** and con
 ```bash
 npm install
 npm run dev        # http://localhost:3000
-npm run build      # production Next.js build
+npm run next:build # production Next.js build only
+npm run build      # production Next.js build + OpenNext Cloudflare bundle
 npm run preview    # OpenNext Cloudflare preview
 ```
 
@@ -24,8 +25,8 @@ Connect the GitHub repo, then set:
 
 | Setting | Value |
 | --- | --- |
-| Build command | `npx opennextjs-cloudflare build` |
-| Deploy command | `npx opennextjs-cloudflare deploy` |
+| Build command | `npm run build` |
+| Deploy command | `npx wrangler deploy` |
 | Worker config | `wrangler.jsonc` |
 | Node version | 20 or 22 |
 
